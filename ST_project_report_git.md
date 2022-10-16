@@ -105,15 +105,15 @@ forecast::ggtsdisplay(data %>% pull(Close))
 
 Direct smoothing or discounted least squares is a technique for updating
 the parameters of a multiple linear regression such as:  
-\[
+$$
 Y_t = \sum_{i=0}^{p}\beta_ix_i(t) + \varepsilon_t
-\]  
-for \(t=1,\dots,T\), \(x_i(t)\) are functions of time. But we need to
+$$
+for $t=1,\dots,T$, $x_i(t)$ are functions of time. But we need to
 estimate the parameters \(\beta_i\), one methods for that is called
 Discounted Least Squares (*DLS*). The estimates is defined by:  
-\[
+$$
 \widehat{\boldsymbol{\beta}}(T) = \mathbf{G}(T)^{-1}\mathbf{g}(T)
-\]  
+$$  
 where \(\mathbf{G}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{X}(T)\)
 and \(\mathbf{g}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{y}\),
 \(\mathbf{W}\) is a weight matrix such that their magnitudes decrease
