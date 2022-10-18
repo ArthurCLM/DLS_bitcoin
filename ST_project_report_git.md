@@ -23,9 +23,12 @@ library(readr)
 library(tidyverse)
 library(tseries)
 library(forecast)
+```
 
+``` r
 data <- read_csv("C:/Users/Tucac/OneDrive/Escritorio/Séries Temporais/dados_bitcoin.csv")
 ```
+
 
 ``` r
 data %>% 
