@@ -24,11 +24,8 @@ library(tidyverse)
 library(tseries)
 library(forecast)
 ```
-The path that the data is located has been omitted
-``` r warning=FALSE, message=FALSE, eval=TRUE, echo=FALSE
-data <- read_csv("C:/Users/Tucac/OneDrive/Escritorio/Séries Temporais/dados_bitcoin.csv")
-```
 
+The path that the data is located has been omitted
 
 ``` r
 data %>% 
@@ -40,7 +37,7 @@ data %>%
   ggplot2::labs(x = 'Time', y = 'Closing Prices Bitcoin')
 ```
 
-![](ST_project_report_git_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](ST_project_report_git_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 An alternative is to see the variation in the closing prices stock in
 different months. From October (10) to November (11) there is a large
@@ -59,7 +56,7 @@ data %>%
   theme_bw()
 ```
 
-![](ST_project_report_git_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+![](ST_project_report_git_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 To step away for an subjective analysis, we can make some measurements
 grouping by month, as:
@@ -102,7 +99,7 @@ that the time series behaves like a 1° order difference equation.
 forecast::ggtsdisplay(data %>% pull(Close)) 
 ```
 
-![](ST_project_report_git_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+![](ST_project_report_git_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
 
 # About the model
 
@@ -208,7 +205,7 @@ df_pred %>%
     using three different parameters model.")
 ```
 
-![](ST_project_report_git_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](ST_project_report_git_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 Looking the MSE of each model the lowest value of MSE it is from
 \(\theta = 0.5\)
@@ -274,7 +271,7 @@ df_final %>%
   ggtitle(label = "Graphic of Predictions closing price stock Bitcoin for the final model")
 ```
 
-![](ST_project_report_git_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![](ST_project_report_git_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
 # Residues analysis
 
@@ -285,7 +282,7 @@ df_final <- df_final %>%
 forecast::ggtsdisplay(pull(df_final,Residual), plot.type = 'histogram') 
 ```
 
-![](ST_project_report_git_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
+![](ST_project_report_git_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
 ``` r
 Box.test(pull(df_final, Residual), lag = 12, type = "Ljung")
