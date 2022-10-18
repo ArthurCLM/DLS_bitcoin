@@ -109,20 +109,15 @@ $$Y_t = \sum_{i=0}^{p}\beta_ix_i(t) + \varepsilon_t$$
 for $t=1,\dots,T$, $x_i(t)$ are functions of time. But we need to
 estimate the parameters $\beta_i$, one methods for that is called
 Discounted Least Squares (*DLS*). The estimates is defined by:  
-\[
-\widehat{\boldsymbol{\beta}}(T) = \mathbf{G}(T)^{-1}\mathbf{g}(T)
-\]  
-where \(\mathbf{G}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{X}(T)\)
-and \(\mathbf{g}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{y}\),
-\(\mathbf{W}\) is a weight matrix such that their magnitudes decrease
+$$\widehat{\boldsymbol{\beta}}(T) = \mathbf{G}(T)^{-1}\mathbf{g}(T)$$  
+where $\mathbf{G}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{X}(T)$
+and $\mathbf{g}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{y}$,
+$\mathbf{W}$ is a weight matrix such that their magnitudes decrease
 with time.
 
 For this project we will use an simple model, even more because of
 PACF’s evidence, as:
-
-\[
-Y_t = \beta_0 + \beta_1t + \varepsilon_t
-\]  
+$$Y_t = \beta_0 + \beta_1t + \varepsilon_t$$  
 using this model above, the matrix \(\mathbf{G}^{-1}(T)\) is definid by:
 
 \[\mathbf{G}^{-1}(T) =
