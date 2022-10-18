@@ -1,4 +1,4 @@
-Times Series - Project
+Discounted Least Square approach - Bitcoin closing price
 ================
 Arthur Machado
 October, 2022
