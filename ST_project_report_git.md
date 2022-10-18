@@ -24,7 +24,7 @@ library(tidyverse)
 library(tseries)
 library(forecast)
 ```
-
+The path that the data is located has been omitted
 ``` r
 data <- read_csv("C:/Users/Tucac/OneDrive/Escritorio/Séries Temporais/dados_bitcoin.csv")
 ```
