@@ -118,25 +118,22 @@ with time.
 For this project we will use an simple model, even more because of
 PACF’s evidence, as:
 $$Y_t = \beta_0 + \beta_1t + \varepsilon_t$$  
-using this model above, the matrix \(\mathbf{G}^{-1}(T)\) is definid by:
+using this model above, the matrix $\mathbf{G}^{-1}(T)$ is definid by:
 
-\[\mathbf{G}^{-1}(T) =
+$$\mathbf{G}^{-1}(T) =
 \begin{bmatrix}
 1-\theta^2 & (1-\theta)^2\\
 (1-\theta)^2 & \frac{(1-\theta)^3}{\theta}
-\end{bmatrix}
-\]
+\end{bmatrix}$$
 
-Doing some math operations, the expression of \(\widehat\beta_0(T)\) and
-\(\widehat\beta_1(T)\) are given by:  
+Doing some math operations, the expression of $\widehat\beta_0(T)$ and
+$\widehat\beta_1(T)$ are given by:  
 
 An observation that we have to this method it is the initial values are
 made from the ordinary least squares method.
 
 The forecast equation for this model is given by:  
-\[
-\widehat{Y}_{T+\tau} = \widehat\beta_0(T) + \widehat\beta_1(T)\tau
-\]
+$$\widehat{Y}_{T+\tau} = \widehat\beta_0(T) + \widehat\beta_1(T)\tau$$
 
 ## Making some comparisons
 
