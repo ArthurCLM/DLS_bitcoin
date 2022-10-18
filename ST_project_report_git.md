@@ -165,8 +165,7 @@ DLS_model <- function(y, theta){
 }
 ```
 
-Applying the `DLS_model()` for closing prices bitcoin using
-\(\theta = (0.1, 0.5, 0.7)\).
+Applying the `DLS_model()` for closing prices bitcoin using $\theta = (0.1, 0.5, 0.7)$.
 
 ``` r
 df_pred <- data %>% 
@@ -197,8 +196,7 @@ df_pred %>%
 
 ![](ST_project_report_git_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
-Looking the MSE of each model the lowest value of MSE it is from
-\(\theta = 0.5\)
+Looking the MSE of each model the lowest value of MSE it is from $\theta = 0.5$
 
 ``` r
 df_pred %>% 
@@ -238,7 +236,7 @@ MSE_validation %>% filter(MSE == min(MSE))
     ##   <dbl>    <dbl>
     ## 1   0.5 2946594.
 
-The best performance was for \(\theta = 0.5\)
+The best performance was for $\theta = 0.5$
 
 # Predictions
 
