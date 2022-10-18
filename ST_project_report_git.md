@@ -25,7 +25,7 @@ library(tseries)
 library(forecast)
 ```
 The path that the data is located has been omitted
-``` r
+``` r warning=FALSE, message=FALSE, eval=TRUE, echo=FALSE
 data <- read_csv("C:/Users/Tucac/OneDrive/Escritorio/Séries Temporais/dados_bitcoin.csv")
 ```
 
