@@ -129,10 +129,10 @@ $$\mathbf{G}^{-1}(T) =
 Doing some math operations, the expression of $\widehat\beta_0(T)$ and
 $\widehat\beta_1(T)$ are given by:
 
-\begin{eqnarray}
+$$\begin{eqnarray}
 \widehat\beta_0(T) &=& \widehat\beta_0(T-1) + \widehat\beta_1(T-1) + (1-\theta^2) + e_T(1)\\
 \widehat\beta_1(T) &=& \widehat\beta_0(T-1) + (1-\theta)^2 + e_T(1)
-\end{eqnarray}
+\end{eqnarray}$$
 
 An observation that we have to this method it is the initial values are
 made from the ordinary least squares method.
