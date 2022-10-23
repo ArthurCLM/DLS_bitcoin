@@ -121,52 +121,49 @@ forecast::ggtsdisplay(data %>% pull(Close))
 
 Direct smoothing or discounted least squares is a technique for updating
 the parameters of a multiple linear regression such as:  
-\[
-Y_t = \sum_{i=0}^{p}\beta_ix_i(t) + \varepsilon_t
-\]  
-for \(t=1,\dots,T\), \(x_i(t)\) are functions of time. But we need to
-estimate the parameters \(\beta_i\), one methods for that is called
+$$Y_t = \sum_{i=0}^{p}\beta_ix_i(t) + \varepsilon_t$$ 
+for $t=1,\dots,T$, $x_i(t)$ are functions of time. But we need to
+estimate the parameters $\beta_i$, one methods for that is called
 Discounted Least Squares (**DLS**). The estimates is defined by:  
-\[
-\widehat{\boldsymbol{\beta}}(T) = \mathbf{G}(T)^{-1}\mathbf{g}(T)
-\]  
-where \(\mathbf{G}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{X}(T)\)
-and \(\mathbf{g}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{y}\),
-\(\mathbf{W}\) is a weight matrix such that their magnitudes decrease
+$$\widehat{\boldsymbol{\beta}}(T) = \mathbf{G}(T)^{-1}\mathbf{g}(T)$$  
+where $\mathbf{G}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{X}(T)$
+and $\mathbf{g}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{y}$,
+$\mathbf{W}$ is a weight matrix such that their magnitudes decrease
 with time, given by:  
-\[\mathbf{W} =
+$$\mathbf{W} =
 \begin{bmatrix}
 \theta^{T-1} & 0 & \cdots & 0 & 0\\
 0 & \theta^{T-2} & \cdots & 0 & 0\\
 \vdots & \vdots & \ddots & \vdots & \vdots\\
 0 & 0 & \cdots & \theta & 0\\
 0 & 0 & \cdots & 0 & 1
-\end{bmatrix}
-\]
+\end{bmatrix}$$
 
 For this project we will use an simple model, even more because of
 PACF’s evidence, as:
 
-\[
-Y_t = \beta_0 + \beta_1t + \varepsilon_t, \quad t = 1,\dots, T,
-\]  
-using this model above, the matrix \(\mathbf{G}^{-1}(T)\) is definid by:
+$$Y_t = \beta_0 + \beta_1t + \varepsilon_t, \quad t = 1,\dots, T,$$  
+using this model above, the matrix $\mathbf{G}^{-1}(T)$ is definid by:
 
-\[\mathbf{G}^{-1}(T) =
+$$\mathbf{G}^{-1}(T) =
 \begin{bmatrix}
 1-\theta^2 & (1-\theta)^2\\
 (1-\theta)^2 & \frac{(1-\theta)^3}{\theta}
-\end{bmatrix}
-\]
+\end{bmatrix}$$
 
-Doing some math operations, the expression of \(\widehat\beta_0(T)\) and
-\(\widehat\beta_1(T)\) are given by:  
+Doing some math operations, the expression of $\widehat\beta_0(T)$ and
+$\widehat\beta_1(T)$ are given by:  
+
+$$\begin{eqnarray}
+\widehat\beta_0(T) &=& \widehat\beta_0(T-1) + \widehat\beta_1(T-1) + (1-\theta^2) + e_T(1)\\
+\widehat\beta_1(T) &=& \widehat\beta_0(T-1) + (1-\theta)^2e_T(1)
+\end{eqnarray}$$
 
 An observation that we have to this method it is the initial values are
 made from the ordinary least squares method.
 
 The forecast equation for this model is given by:  
-\[\widehat{Y}_{T+\tau} = \widehat\beta_0(T) + \widehat\beta_1(T)\tau\]
+$$\widehat{Y}_{T+\tau} = \widehat\beta_0(T) + \widehat\beta_1(T)\tau$$
 
 ## Making some comparisons
 
