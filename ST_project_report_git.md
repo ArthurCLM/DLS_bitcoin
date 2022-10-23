@@ -3,7 +3,7 @@ Discounted Least Square approach - Bitcoin closing price
 Arthur Machado
 October 15, 2022
 
-# Introduction (What’s bitcoin?)
+# Introduction
 
 The Bitcoin (BTC) is a cryptocurrency, a virtual currency designed to
 act as money and a form of payment outside the control of any one
