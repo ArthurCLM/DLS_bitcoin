@@ -214,7 +214,7 @@ DLS_model <- function(y, theta, h = 0){
 We can see in the code above, that the algorithm need an initials
 footsteps, this footsteps was made Ordinary Least Squares (**OLS**).
 Applying the `DLS_model()` for closing prices bitcoin using
-\(\theta = (0.1, 0.5, 0.7)\).
+$\theta = (0.1, 0.5, 0.7)$.
 
 ``` r
 df_pred <- data %>% 
@@ -254,12 +254,12 @@ it is nothing different from what was presented before.*
 
 ![](ST_project_report_git_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
-We can see above that the choice of parameters \(\theta\) interferes
+We can see above that the choice of parameters $\theta$ interferes
 with the forecast, that for values from 0.5, the forecasts are smoother
-tending to a linear forecast, unlike for \(\theta = 0.1\)
+tending to a linear forecast, unlike for $\theta = 0.1$
 
 Looking the MSE of each model the lowest value of MSE it is from
-\(\theta = 0.5\)
+$\theta = 0.5$)
 
 ``` r
 df_pred %>% 
@@ -299,7 +299,7 @@ MSE_validation %>% filter(MSE == min(MSE))
     ##   <dbl>    <dbl>
     ## 1   0.5 2946594.
 
-The best performance was for \(\theta = 0.5\)
+The best performance was for $\theta = 0.5$
 
 # Fitting the time series
 
@@ -406,7 +406,7 @@ the initials footsteps that him needs, after that the algorithm starts
 to approachs of the real values of the series, learning time at the
 time. For forecasts i think the method applies well for little steps
 forward, but for long-term forecasts it loses precision, this happens
-because for \(h>=2\) the algorithm starts to get the information from
+because for $h>=2$ the algorithm starts to get the information from
 the previous forecast and not from the original series (since it has not
 yet been observed), increasing the prediction error.
 
