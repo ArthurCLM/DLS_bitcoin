@@ -130,8 +130,7 @@ where $\mathbf{G}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{X}(T)$
 and $\mathbf{g}(T) = \mathbf{X}(T)^\top \mathbf{W} \mathbf{y}$,
 $\mathbf{W}$ is a weight matrix such that their magnitudes decrease
 with time, given by:  
-$$\mathbf{W} =
-\begin{bmatrix}
+$$\mathbf{W} =\begin{bmatrix}
 \theta^{T-1} & 0 & \cdots & 0 & 0\\
 0 & \theta^{T-2} & \cdots & 0 & 0\\
 \vdots & \vdots & \ddots & \vdots & \vdots\\
