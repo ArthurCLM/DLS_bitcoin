@@ -401,7 +401,7 @@ autocorrelation.
 # Conclusions
 
 In general the model had a god a fit to the closing price Bitcoin. We
-can see that the model doesn’t ahd a good fitting in the initials
+can see that the model doesn’t had a good fitting in the initials
 observations, this is related with how the algorithm works, because of
 the initials footsteps that him needs, after that the algorithm starts
 to approachs of the real values of the series, learning time at the
