@@ -1,0 +1,128 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  height: 100%;
+}
+
+.content-wrapper {
+  min-height: 100%;
+  margin-left: 215px;
+  background-color: #f3f3f3;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+.box {
+  border-radius: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.box .box-header .box-title {
+  font-size: 16px;
+  color: #959393;
+}
+
+.box .box-body .btn-default,
+.box .box-body .action-button {
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  background-color: #3d9970;
+}
+
+.box .box-body .btn-default:hover {
+  background-color: #3d9970;
+}
+
+.box .box-body .btn-default .fa {
+  margin-right: 5px;
+}
+
+.box .box-body th {
+  font-size: 12px;
+}
+
+.box .box-body td {
+  font-size: 12px;
+  color: #959393;
+}
+
+
+.dataTables_wrapper .dt-buttons {
+  float: left;
+}
+
+.dataTables_wrapper button.dt-button {
+  box-shadow: none;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #3d9970;
+  outline: none;
+}
+
+.dataTables_wrapper button.dt-button:hover {
+  border: none;
+  background: #3d9970;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  border: none;
+}
+
+.dataTables_wrapper .dataTables_paginate span .paginate_button.current {
+  background: #3d9970;
+  color: #fff !important;
+}
+
+
+.nav-tabs-custom .nav-tabs li.active:hover a,
+                    .nav-tabs-custom .nav-tabs li.active a {background-color: #fff;
+                                               border-color: #fff;
+                                               }
+                    .nav-tabs-custom .nav-tabs li.active {border-top-color:
+                                                      #3d9970;
+                                                      }
+
+a{color: #f50000;}     
+
+
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: block !important;
+    width: auto !important;
+    vertical-align: middle;
+}
+
